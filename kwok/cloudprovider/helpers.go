@@ -87,7 +87,7 @@ func ConstructInstanceTypes() []*cloudprovider.InstanceType {
 
 					opts.Offerings = cloudprovider.Offerings{}
 					for _, zone := range KwokZones {
-						for _, ct := range []string{v1beta1.CapacityTypeSpot, v1beta1.CapacityTypeOnDemand} {
+						for _, ct := range []string{ /* v1beta1.CapacityTypeSpot,*/ v1beta1.CapacityTypeOnDemand} {
 							opts.Offerings = append(opts.Offerings, cloudprovider.Offering{
 								CapacityType: ct,
 								Zone:         zone,
